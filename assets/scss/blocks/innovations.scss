@@ -1,0 +1,133 @@
+.innovation {
+    .section-main {
+        background: url('./assets/images/bg/innovation_bg.jpg') fixed repeat-x 0 center/cover;
+        background-color: $gray;
+        &[data-image="1"] {
+            &:before {
+                background-image: url('./assets/images/bg/innovation-bg_white.png');
+                background-color: rgba($gray, .8);
+            }
+        }
+
+        &[data-image="2"] {
+            &:before {
+                background-image: url('./assets/images/bg/innovation-bg_black.png');
+                background-color: rgba(#171C26, .8);
+            }
+
+            .innovation__content {
+                color: #fff;
+            }
+
+            .bottom-block {
+                background-color: rgba(#4D525A, .5);
+                &:before {
+                    border-left-color: rgba(#4D525A, .5);
+                }
+            }
+
+            .color__item {
+                border-color: $gray;
+            }
+        }
+
+        &[data-image="3"] {
+            &:before {
+                background-image: url('./assets/images/bg/innovation-bg_brown.png');
+                background-color: rgba(#21191A, .8);
+            }
+
+            .innovation__content {
+                color: #fff;
+            }
+            .bottom-block {
+                background-color: rgba(#757270, .5);
+                &:before {
+                    border-left-color: rgba(#757270, .5);
+                }
+            }
+            .color__item {
+                border-color: $gray;
+            }
+        }
+
+        .container {
+            position: relative;
+            height: 100%;
+        }
+
+        .bottom-block {
+            background-color: rgba($white, 0.3);
+        }
+
+        &:after, &:before {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: no-repeat 90% center;
+            background-size: auto 65%;
+        }
+        &:after {
+            background: url('./assets/images/bg/bg.png') repeat-x 0 center/cover;
+            animation: animatedBackground 90s linear infinite;
+        }
+    }
+}
+
+// Color switch 
+.color__switch {
+    text-align: center;
+}
+.color__item {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: rem(40px);
+    height: rem(40px);
+    border: 1px dashed $dark;
+    border-radius: 50%;
+    margin: 0 8px;
+
+    &:before {
+        content: '';
+        display: inline-block;
+        width: rem(28px);
+        height: rem(28px);
+        border-radius: 50%;
+        cursor: pointer;
+    }
+
+    &[data-color="1"] {
+        &:before {
+            background-color: $white;
+        }
+    }
+    &[data-color="2"] {
+        &:before {
+            background-color: #000;
+        }
+    }
+    &[data-color="3"] {
+        &:before {
+            background-color: $brown;
+        }
+    }
+    &:hover {
+        animation: fullRotate 5s linear infinite;
+    }
+}
+
+.innovation__content {
+    position: relative;
+    cursor: pointer;
+    width: 100%;
+    height: 75%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}

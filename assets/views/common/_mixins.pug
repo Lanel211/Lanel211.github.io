@@ -1,0 +1,30 @@
+mixin icon(iconName, iconClass)
+  svg(class=`${iconClass}`)
+    use(xlink:href=`./assets/images/icons/sprite.svg#${iconName}`)
+
+mixin image(imagePath, imageAlt, imageClass)
+  img(src=`./assets/images/${imagePath}`, alt=`${imageAlt}`, class=`${imageClass}`)
+
+mixin features(featureName, featureDesc)
+  .feature__item
+    .feature__icon
+      +icon(featureName, featureName + '-icon')
+    .feature__desc #{featureDesc}
+
+mixin preload(itemSection)
+  .section-preload.slideInPreload.wow(data-wow-offset="80")
+    .section-preload__title #{itemSection}
+
+mixin sectionHeader(itemMenu, title)
+  .section__menu-item #{itemMenu}
+  h2.section__title #{title}
+
+mixin accordionItem(itemTitle, itemDesc)
+  li.accordion__item
+    .accordion__item-content
+      .accordion__item-title #{itemTitle}
+      .accordion__item-desc #{itemDesc}
+
+mixin menuItem(menuTitle, menuTarget, index)
+  a(href="#" + menuTarget data-index=index).fixed-menu__item
+    .menu__item-title #{menuTitle}

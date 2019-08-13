@@ -1,0 +1,52 @@
+.features__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.feature__item {
+    width: 24%;
+    margin-bottom: 1%;
+    background: linear-gradient(180deg, #262D35 0%, #445365 100%), $dark;
+    color: $white;
+    padding: rem(15px);
+    text-align: center;
+    transform-origin: 50%;
+    transition: transform .3s;
+
+    &:hover {
+        transform: scale(1.2);
+        background: $gray;
+        color: $dark;
+
+        svg{
+            fill: $dark;
+            color: $primary;
+        }
+    }
+
+    @include desktops {
+        width: 32%;
+    }
+    @include laptops {
+        width: 49%;
+    }
+    @include phones {
+        width: 100%;
+    }
+}
+.feature__icon {
+    height: rem(60px);
+    margin-bottom: rem(15px);
+
+    svg {
+        height: rem(60px);
+        width: 100%;
+        fill: $white;
+        color: $primary;
+    }
+}
+.feature__desc {
+    max-width: rem(270px);
+    margin: auto;
+}

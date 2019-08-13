@@ -1,0 +1,18 @@
+section#management.management(data-index="8")
+    +preload('Управление')
+    .section-main.slideInBase.wow(data-wow-offset="80")
+        .container.section__content
+            .left-block
+                +sectionHeader('Управление', 'Простота управления')
+                .section__desc 
+                    <p>Для пользователя основным элементом управления системой является смартфон с приложением MAKS PRO, работающий с устройствами через облако MAKS Cloud.</p>
+                    <p>Приложение используется и при работе в составе пультовой системы охраны, и в автономном режиме. Оно максимально простое и не перегружено излишней информацией.</p>
+            .center-block
+                +image("screens/management-mob1.png", "", "screen")
+            .right-block
+                ul.accordion(data-class="management-mob")
+                    +accordionItem('Постановка под охрану', 'Постановка “Остаюсь” и постановка “Ухожу”')
+                    +accordionItem('Снятие с охраны', 'Снятие с охраны одним движением')
+                    +accordionItem('История', 'Просмотр журнала событий')
+                    +accordionItem('Уведомления', 'Получение уведомлений о тревожных событиях системы, постановке и снятии с охраны')
+                    +accordionItem('Управление устройствами', 'Управление группами охраны и исполнительными устройствами')

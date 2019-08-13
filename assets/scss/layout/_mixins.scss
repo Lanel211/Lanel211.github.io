@@ -1,0 +1,35 @@
+// Media
+@mixin desktops {
+	@media screen and (max-width: $desktops) {
+		@content;
+	}
+}
+
+@mixin laptops {
+	@media screen and (max-width: $laptops) {
+		@content;
+	}
+}
+
+@mixin tablets {
+	@media screen and (max-width: $tablets) {
+		@content;
+	}
+}
+
+@mixin phones {
+	@media screen and (max-width: $phones) {
+		@content;
+	}
+}
+
+@mixin font($size, $family, $color) {
+	font-size: $size;
+	font-family: $family, 'Roboto', Helvetica, sans-serif;
+	font-weight: normal;
+	color: $color;
+}
+
+@function rem($px) {
+  @return $px / 16px + 0rem;
+}

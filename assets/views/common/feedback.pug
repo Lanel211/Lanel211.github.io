@@ -1,0 +1,11 @@
+section#feedback.feedback(data-index="10")
+    .container
+        h2.section__title Свяжитесь с нами
+        .feedback__desc Если Вы заинтересованы или у Вас остались вопросы
+        form.feedback__form
+            .form__row
+                input(type="text" placeholder="Ваше имя" required)
+                input(type="email" placeholder="Ваш email" required)
+            textarea(placeholder="Сообщение")
+            button Отправить
+    include ../common/footer.pug

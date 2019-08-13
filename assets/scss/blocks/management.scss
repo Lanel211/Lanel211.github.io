@@ -1,0 +1,59 @@
+.management {
+    .section__content {
+        display: flex;
+        justify-content: space-between;
+        @include desktops {
+            flex-wrap: wrap;
+        }
+        @include tablets {
+            padding-bottom: rem(50px);
+        }
+    }
+
+    .right-block {
+        width: 30%;
+        position: relative;
+
+        @include laptops {
+            width: 40%;
+        }
+        @include tablets {
+            width: 100%;
+        }
+    }
+    .left-block {
+        width: 30%;
+        position: relative;
+
+        @include desktops {
+            width: 100%;
+            margin-bottom: rem(30px);
+        }
+    }
+    .center-block {
+        width: 40%;
+        text-align: center;
+
+        @include desktops {
+            width: 70%;
+        }
+        @include laptops {
+            width: 60%;
+        }
+        @include tablets {
+            width: 100%;
+        }
+    }
+
+    img {
+        max-width: 100%;
+        max-height: calc(90vh - 6.25rem);
+    }
+
+    .accordion {
+        height: 88%;
+        @include tablets {
+            height: 100%;
+        }
+    }
+}

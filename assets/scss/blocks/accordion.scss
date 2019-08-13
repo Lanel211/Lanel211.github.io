@@ -1,0 +1,144 @@
+.accordion {
+    padding-left: 10%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+
+    &:before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 10%;
+        margin-left: rem(11px);
+        height: calc(100% - 10px);
+        border-left: 1px solid $dark;
+
+        @include tablets {
+            height: 0;
+            width: calc(100% - 10px);
+            border-top: 1px solid $dark;
+            border-left: none;
+            top: 0;
+            bottom: initial;
+            left: 0;
+            margin-left: 0;
+            margin-top: rem(11px);
+        }
+    }
+
+    @include tablets {
+        flex-direction: row;
+        padding-left: 0;
+    }
+
+}
+.accordion__item {
+    height: rem(22px);
+    margin-bottom: rem(10px);
+    display: flex;
+    cursor: pointer;
+    transition: .5s;
+    position: relative;
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    @include tablets {
+        width: rem(24px);
+    }
+
+    &:before {
+        content: '';
+        display: inline-block;
+        width: rem(20px);
+        height: rem(20px);
+        min-width: rem(20px);
+        background-color: $white;
+        border-radius: 50%;
+        border: 1px dashed $dark;
+        cursor: pointer;
+        margin-right: rem(18px);
+
+        @include tablets {
+            margin-right: 0;
+        }
+    }
+    &--active {
+        height: 100%;
+        transition: .3s;
+
+        .accordion__item-title {
+            font-weight: 500;
+            font-size: rem(24px);
+
+            @include tablets {
+                display: inline-block;
+                opacity: 1;
+                transition: .3s;
+                transition-delay: .3s;
+            }
+        }
+
+        .accordion__item-desc {
+            height: auto;
+            opacity: 1;
+            transition: .3s;
+            transition-delay: .3s;
+        }
+
+        &:before {
+            margin-top: rem(6px);
+            @include tablets {
+                margin-top: 0;
+            }
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            top: rem(6px);
+            left: 0;
+            margin-top: rem(4px);
+            margin-left: rem(4px);
+            width: rem(14px);
+            height: rem(14px);
+            border-radius: 50%;
+            background-color: $primary;
+
+            @include tablets {
+                top: 0;
+            }
+        }
+
+        @include tablets {
+            width: 100%;
+        }
+    }
+}
+
+.accordion__item-content {
+    @include tablets {
+        margin-top: rem(30px);
+        margin-left: rem(-22px);
+        height: rem(135px);
+    }
+}
+
+.accordion__item-title {
+    font-weight: 500;
+    transition: .5s;
+
+    @include tablets {
+        font-size: rem(24px);
+        opacity: 0;
+        transition-delay: -.3s;
+    }
+}
+.accordion__item-desc {
+    height: 0;
+    opacity: 0;
+
+    @include tablets {
+        height: auto;
+    }
+}

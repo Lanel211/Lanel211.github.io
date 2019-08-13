@@ -1,0 +1,56 @@
+.feedback {
+    display: flex;
+    padding-top: 10%;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 0;
+    background-color: $primary;
+    text-align: center;
+    color: $white;
+
+    .section__title {
+        text-transform: uppercase;
+        color: $white;
+    }
+
+    @include tablets {
+        padding-top: rem(60px);
+    }
+}
+
+.feedback__form {
+    max-width: rem(800px);
+    margin: rem(50px) auto;
+    color: $white;
+    input {
+        color: $white;
+        &:focus {
+            border-color: rgba($white, .5);
+        }
+    }
+    textarea {
+        height: rem(110px);
+    }
+
+    .form__row {
+        input {
+            width: 48%;
+            @include tablets {
+                width: 100%;
+            }
+        }
+    }
+    button {
+        border-color: $white;
+        background-color: transparent;
+        min-width: 48%;
+        &:hover {
+            background-color: $white;
+            color: $primary;
+        }
+
+        @include phones {
+            width: 100%;
+        }
+    }
+}

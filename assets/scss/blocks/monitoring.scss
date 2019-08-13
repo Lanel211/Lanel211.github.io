@@ -1,0 +1,46 @@
+.monitoring {
+    .section-main {
+        background: url("./assets/images/bg/monitoring_bg.png") $light-gray no-repeat center bottom;
+        background-size: 70% auto;
+        @include desktops {
+            background-size: 100% auto;
+        }
+    }
+
+    .section__title, .section__menu-item {
+        color: $dark;
+    }
+    .section__title {
+        margin-bottom: rem(30px);
+    }
+
+    .bottom-block {
+        background: rgba($gray, .5);
+        z-index: -1;
+        &:before {
+            right: 0;
+            left: initial;
+            border-right: 100vw solid rgba($gray, .5);
+            border-left: none;
+        }
+    }
+
+    .bottom-block__icon {
+        margin: rem(30px) auto;
+    }
+}
+.monitoring__content {
+    display: flex;
+    justify-content: space-between;
+    @include tablets {
+        flex-wrap: wrap;
+    }
+
+    .left-block, .right-block {
+        width: 48%;
+
+        @include tablets {
+            width: 100%;
+        }
+    }
+}

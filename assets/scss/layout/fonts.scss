@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&subset=cyrillic');
+
+@font-face {
+  font-family: 'Raleway';
+  src: url('./assets/fonts/raleway/Raleway-Regular.woff') format('woff'), 
+  url('./assets/fonts/raleway/Raleway-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url('./assets/fonts/raleway/Raleway-Bold.woff') format('woff'), 
+  url('./assets/fonts/raleway/Raleway-Bold.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url('./assets/fonts/raleway/Raleway-ExtraBold.woff') format('woff'), 
+  url('./assets/fonts/raleway/Raleway-ExtraBold.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'In Collection';
+  src: url('./assets/fonts/in-collection/InCollection.woff') format('woff'), 
+  url('./assets/fonts/in-collection/InCollection.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'In Collection';
+  src: url('./assets/fonts/in-collection/InCollection-italic.woff') format('woff'), 
+  url('./assets/fonts/in-collection/InCollection-italic.woff2') format('woff2');
+  font-weight: normal;
+  font-style: italic;
+  font-display: block;
+}

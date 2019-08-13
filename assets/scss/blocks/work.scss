@@ -1,0 +1,25 @@
+.work {
+    .section-main {
+        background: url("./assets/images/bg/work_bg.png") fixed $white no-repeat center/cover;
+        &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 37%;
+            height: 100%;
+            background-color: rgba($dark, .8);
+        }
+    }
+}
+
+.work__scheme {
+    display: block;
+    margin: auto;
+    width: 80%;
+
+    @include laptops {
+        width: 100%;
+    }
+}

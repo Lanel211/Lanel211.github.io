@@ -1,0 +1,20 @@
+extends ../main.layout.pug
+
+block content
+  include ../common/hero.pug
+  include ../common/innovation.pug
+  include ../common/features.pug
+  include ../common/work.pug
+  include ../common/montage.pug
+  include ../common/setting.pug
+  include ../common/monitoring.pug
+  include ../common/management.pug
+  -//include ../common/specification.pug
+  include ../common/feedback.pug
+  include ../common/fixed-menu.pug
+
+  #hellopreloader
+    #hellopreloader_preload
+
+block scripts
+  script new WOW().init();

@@ -1,0 +1,27 @@
+section#setting.setting(data-index="6")
+    +preload('Настройка')
+    .section-main.slideInBase.wow(data-wow-offset="80")
+        .container.section__content
+            .left-block
+                +sectionHeader('Настройка', 'Простота настройки')
+                .section__desc 
+                    <p>Полная настройка со смартфона с помощью мобильного приложения MAKS Setup через MAKS Cloud.</p>
+                    <p>Полная настройка с помощью WEB-версии приложения MAKS Setup. Приложение очень удобно для стационарных условий центра мониторинга. Не выезжая на объект, можно провести полную настройку и диагностику системы.</p>
+            .center-block
+                +image("screens/set-web1.png", "", "screen")
+            .right-block
+                ul.accordion(data-class="set-web")
+                    +accordionItem('Элементы системы', 'Добавление и настройка всех беспроводных элементов системы')
+                    +accordionItem('Настройки доступа', 'Добавление и настройка всех беспроводных элементов системы')
+                    +accordionItem('Технические параметры', 'Добавление и настройка всех беспроводных элементов системы')
+                    +accordionItem('Проверка связи', 'Добавление и настройка всех беспроводных элементов системы')
+                    +accordionItem('Охрана и мониторинг', 'Добавление и настройка всех беспроводных элементов системы')
+                    +accordionItem('Обновление', 'Добавление и настройка всех беспроводных элементов системы')
+                    +accordionItem('Журнал событий', 'Добавление и настройка всех беспроводных элементов системы')
+
+        .bottom-block
+            .bottom-block__content
+                .bottom-block__icon
+                    +icon('set-web', 'bottom__icon')
+                .bottom-block__icon
+                    +icon('set-mobile', 'bottom__icon')

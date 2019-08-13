@@ -1,0 +1,26 @@
+include ./common/_mixins
+block variables
+
+doctype html
+html(lang="ru")
+  head
+    meta(charset="utf-8")
+    meta(content="ie=edge" http-equiv="x-ua-compatible")
+    meta(content="width=device-width, initial-scale=1" name="viewport")
+    meta(http-equiv="Content-Type" content="image/svg+xml" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink")
+    
+    title MAKS PRO
+    link(rel='stylesheet' href='main.min.css')
+  body
+    .wrapper
+      .maincontent
+        block content
+
+    script(src='./assets/scripts/jquery-3.3.1.min.js')
+    script(src='./assets/scripts/jquery.touchSwipe.min.js')
+    script(src='./assets/scripts/mobile-detect.min.js')
+    script(src='./assets/scripts/preload.js')
+    script(src='./assets/scripts/wow.min.js')
+    script(src='./assets/scripts/main.js')
+    
+    block scripts

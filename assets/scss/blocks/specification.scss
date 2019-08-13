@@ -1,0 +1,15 @@
+.specification {
+    display: inline-block;
+    background-color: $dark;
+    color: $white;
+
+    .section__title {
+        color: $white;
+        text-align: center;
+    }
+}
+
+.specification__icon {
+    fill: $white;
+    stroke: $white;
+}

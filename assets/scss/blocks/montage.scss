@@ -1,0 +1,74 @@
+.montage {
+    .section-main {
+        background: $light-gray;
+    }
+
+    .section__content {
+        text-align: right;
+
+        @include tablets {
+            text-align: left;
+        }
+    }
+
+    .section__title, .section__desc, .section__menu-item {
+        width: 40%;
+        margin-left: auto;
+        @include desktops {
+            width: 50%;
+        }
+        @include tablets {
+            width: 100%;
+        }
+    }
+
+    .section__desc {
+        text-align: left;
+    }
+}
+
+.montage__img {
+    background: url("./assets/images/maks_pro.svg") no-repeat right center/cover;
+    position: absolute;
+    top: 5%;
+    left: 0;
+    width: 55%;
+    height: 90%;
+
+    @include desktops {
+        width: 45%;
+    }
+    @include tablets {
+        width: 100%;
+        opacity: .5;
+    }
+}
+
+.montage__list {
+    margin-top: rem(45px);
+}
+.montage__item {
+    margin-bottom: rem(15px);
+    border-bottom: 1px dashed $gray;
+    padding-bottom: rem(15px);
+    display: inline-flex;
+    align-items: center;
+    width: 100%;
+
+    &:last-child {
+        padding-bottom: 0;
+        border-bottom: 0;
+    }
+
+    &:before {
+        content: '';
+        display: inline-block;
+        width: rem(30px);
+        height: rem(30px);
+        min-width: rem(30px);
+        margin-right: rem(15px);
+        background: url('./assets/images/item_arrow.svg') no-repeat left center;
+        background-size: rem(20px) auto;
+        vertical-align: middle;
+    }
+}
